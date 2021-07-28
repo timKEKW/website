@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="Hauptgebäude.css">
+    <title>Hauptgebäude</title>
+</head>
+
+<body id="raum3">
+    <h4 id="3text1"> 
+        <p> Du befindest dich im dritten Raum des Hauptgebäudes. </p>
+    </h4>
+
+    <h5 id="3text2">
+        <p> Um weiter zu kommen, finde die Zahl, <br> die es nicht in diesem Raum gibt. </p>
+    </h5>
+
+    <h1 id="text1">
+            <p id="p1"> 1 </p>
+            <p id="p2"> 2 </p>
+            <p id="p3"> 3 </p>
+            <p id="p4"> 4 </p>
+            <p id="p5"> 5 </p>
+            <p id="p6"> 6 </p>
+            <p id="p7"> 7 </p>
+            <p id="p8"> 8 </p>
+            <p id="p0"> 0 </p>
+    </h1>
+    
+    <button type="button" id="button5" onclick="raten();">
+        Gib deine Zahl ein!
+    
+
+    <script>
+        function raten() {
+        let num = prompt("Gib deine Zahl ein");
+        if(num == 9) {
+            room4();
+        }
+        else {
+            alert(num + " ist Leider falsch.");
+        }
+    }
+    </script>
+    
+    <script>
+    function room4() {
+        window.location.replace("../hauptgebaeude/hgraum4.html");
+    }
+    </script>  
+</body>

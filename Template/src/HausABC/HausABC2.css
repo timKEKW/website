@@ -1,0 +1,107 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body{
+    font-variant: small-caps;
+    font-size: 40px;
+}
+
+#timer{
+    color: rgb(255, 198, 255);
+    text-shadow: black 0px 0px 10px;
+    user-select: none;
+}
+
+#task{
+    color:rgb(247, 37, 133);
+    position: absolute;
+    left: 5%;
+    text-shadow: black 0px 0px 10px;
+    user-select: none;
+}
+
+#current_word{
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    color:rgb(37, 247, 72);
+    text-shadow: black 0px 0px 10px;
+    user-select: none;
+    background-color:rgba(150, 154, 151,0.5);
+    width: auto;
+    text-align: center;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+
+#current_predicted_word{
+    position: absolute;
+    left: 20%;
+    top: 55%;
+    color:rgb(247, 37, 37);
+    text-shadow: black 0px 0px 10px;
+    user-select: none;
+    background-color:rgba(150, 154, 151,0.5);
+    width: auto;
+    text-align: center;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+
+#exit{
+    position: absolute;
+    text-align: center;
+    height: 75px;
+    width: 75px;
+    top: 3%;
+    left: 94%;
+    border: 3px black solid;
+    font-size: 50px;
+    border-radius: 50%;
+    background: rgba(150, 154, 151,0.5);
+    user-select: none;
+}
+
+#reset{
+    position: absolute;
+    text-align: center;
+    height: 75px;
+    width: auto;
+    top: 30%;
+    left: 82.5%;
+    border: 3px black solid;
+    font-size: 50px;
+}
+
+h1{
+    user-select: none;
+}
+#progress{
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    border: 3px black solid;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    height: 50px;
+    width: 50%;
+}
+
+#progress::-webkit-progress-value { 
+    background-color: rgba(0, 7, 10, 0.8);
+    border-radius: 25px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(150, 154, 151, 0.8); 
+    border-radius: 25px;
+}
+
+canvas{
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    border: 2px black solid;
+    border-radius: 20px;
+    overflow: hidden;
+}

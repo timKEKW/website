@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vorlesungsgebäude.css">
+    <title>Document</title>
+</head>
+<body id="quiz_seite">
+<div id="quiz_fragen">
+<div class="auswahl">
+    <h3>Frage 1: Welches Tier ist stellvertretend für Python?</h3>
+    <input type="radio" name="pythonTier" id="fr1_1">
+    <label for="fr1_1"> Katze </label>
+    <input type="radio" name="pythonTier" id="fr1_2">
+    <label for="fr1_2"> Eichhörnchen </label>
+    <input type="radio" name="pythonTier" id="fr1_3">
+    <label for="fr1_3"> Aal </label>
+    <input type="radio" name="pythonTier" id="fr1_4">
+    <label for="fr1_4"> Schlange </label>
+    <input type="radio" name="pythonTier" id="fr1_5">
+    <label for="fr1_5"> Pinguin </label>
+</div>
+</br>
+<div class="auswahl">
+    <h3>Frage 2: Wie sieht die Hauptschleife in Java aus?</h3>
+    <input type="radio" name="mainJava" id="fr2_1">
+    <label for="fr2_1"> public void static main(String args){} </label>
+    <input type="radio" name="mainJava" id="fr2_2">
+    <label for="fr2_2"> public static void main(String [] args){} </label>
+    <input type="radio" name="mainJava" id="fr2_3">
+    <label for="fr2_3"> public void main (String [] args){} </label>
+    <input type="radio" name="mainJava" id="fr2_4">
+    <label for="fr2_4"> static main(){} </label>
+    <input type="radio" name="mainJava" id="fr2_5">
+    <label for="fr2_5"> main public void(String [] args){} </label>
+</div>
+</br>
+<div class="auswahl">
+    <h3>Frage 3: Die fünf SAP Begründer zu denen Hasso Plattner zählt waren ehemalige Mitarbeiter welches großen IT-Riesens?</h3>
+    <input type="radio" name="SAP_HPI" id="fr3_1">
+    <label for="fr3_1"> Apple </label>
+    <input type="radio" name="SAP_HPI" id="fr3_2">
+    <label for="fr3_2"> Alphabet Inc. (Google) </label>
+    <input type="radio" name="SAP_HPI" id="fr3_3">
+    <label for="fr3_3"> IBM </label>
+    <input type="radio" name="SAP_HPI" id="fr3_4">
+    <label for="fr3_4"> Adobe </label>
+    <input type="radio" name="SAP_HPI" id="fr3_5">
+    <label for="fr3_5"> Amazon </label>
+</div>
+</br>
+<div class="auswahl">
+    <h3>Frage 4: Welche der folgenden Methoden des Projectmanagement gibt es nicht?</h3>
+    <input type="radio" name="Pmanagement" id="fr4_1">
+    <label for="fr4_1"> SRUM </label>
+    <input type="radio" name="Pmanagement" id="fr4_2">
+    <label for="fr4_2"> MoSCoW Matrix </label>
+    <input type="radio" name="Pmanagement" id="fr4_3">
+    <label for="fr4_3"> Minimum viable Product </label>
+    <input type="radio" name="Pmanagement" id="fr4_4">
+    <label for="fr4_4"> KSLAdvantage </label>
+    <input type="radio" name="Pmanagement" id="fr4_5">
+    <label for="fr4_5"> Kanban </label>
+</div>
+</br>
+<div class="auswahl">
+    <h3>Frage 5: Welches Tier ist stellvertretend für Linux?</h3>
+    <input type="radio" name="linuxTier" id="fr5_1">
+    <label for="fr5_1"> Katze </label>
+    <input type="radio" name="linuxTier" id="fr5_2">
+    <label for="fr5_2"> Eichhörnchen </label>
+    <input type="radio" name="linuxTier" id="fr5_3">
+    <label for="fr5_3"> Aal </label>
+    <input type="radio" name="linuxTier" id="fr5_4">
+    <label for="fr5_4"> Schlange </label>
+    <input type="radio" name="linuxTier" id="fr5_5">
+    <label for="fr5_5"> Pinguin </label>
+</div>
+    <button form="button" onclick="checkAnswers()">Abgeben</button>
+    
+</div>
+<script>
+    function checkAnswers(){
+        console.log("ja");
+        let radiobutton1 = document.getElementById("fr1_4");
+        let radiobutton2 = document.getElementById("fr2_2");
+        let radiobutton3 = document.getElementById("fr3_3");
+        let radiobutton4 = document.getElementById("fr4_4");
+        let radiobutton5 = document.getElementById("fr5_5");
+
+        if(radiobutton1.checked==true && radiobutton2.checked==true && radiobutton3.checked==true && radiobutton4.checked==true && radiobutton5.checked==true ){
+            console.log("Works");
+            window.location.href="sudoku.html"
+        }else{
+            alert("Leider falsch!")
+        }
+
+
+    }
+</script>
+</body>
+
+</html>

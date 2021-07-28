@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vorlesungsgebäude.css">
+</head>
+<body id="hi">
+    <h1>Die Tür stand ja sogar noch offen, was ein Glück.</h1>
+    <div id="abfrage"> </div>
+    <script>
+
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            document.querySelector('#abfrage').innerHTML="<p>Leider hast du bei all der Aufregung deine Aufgaben im Hörsal liegen lassen... </br> Die Tür ist zu und du musst dringend deine Softwaretechniken I Aufgaben abgeben! Schnell lass uns die Fragen nochmal beantworten!</p> <button form='button' onclick='redirect()'> Fragen </button>";
+        }
+    });
+    function redirect(){
+        window.location.href ="fragen.html";
+    }
+    </script>
+</body>
+</html>

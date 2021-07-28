@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="Hauptgebäude.css">
+    <title>Hauptgebäude</title>
+</head>
+
+<body id="raum2">
+     
+     <h1 id="r2h1">
+        Du befindest dich im zweiten Raum.
+     </h1>
+
+     <h2 id="r2h2">
+        Um weiter zu kommen, <br> finde alle versteckten Buttons!
+     </h2>
+
+
+     <input type="radio" onchange="inc();" id="radio1">
+     <input type="radio" onchange="inc();" id="radio2">
+     <input type="radio" onchange="inc();" id="radio3">
+     <input type="radio" onchange="inc();" id="radio4">
+     <input type="radio" onchange="inc();" id="radio5">
+
+     <script>
+         let i = 0;
+         function inc() {
+            i++;
+            if(i >= 5)
+            {
+                room3();
+            }
+         }
+
+     </script>
+
+    <script>
+    function room3() {
+        window.location.replace("h../hauptgebaeude/hgraum3.html");
+    }
+    </script>
+
+</body>

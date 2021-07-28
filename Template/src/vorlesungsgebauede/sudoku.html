@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vorlesungsgebäude.css">
+</head>
+<body id="sudoku">
+    <div class="flexsudoku">
+        <input class="insudoku" type="number" id="eins"></input>
+        <p class="psudoku">2</p>
+        <p class="psudoku">1</p>
+        <input class="insudoku"type="number" id="zwei"></input>
+    </div>
+    </br>
+    <div class="flexsudoku">
+        <p class="psudoku">4</p>
+        <input class="insudoku"type="number" id="drei"></input>
+        <p class="psudoku">3</p>
+        <input class="insudoku"type="number" id="vier"></input>
+    </div>
+</br>
+    <div class="flexsudoku">
+        <p class="psudoku">1</p>
+        <p class="psudoku">4</p>
+        <p class="psudoku">2</p>
+        <input class="insudoku"type="number" id="fünf"></input>
+    </div>
+</br>
+    <div class="flexsudoku">
+        <input class="insudoku"type="number" id="sechs"></input>
+        <p class="psudoku">3</p>
+        <input class="insudoku"type="number" id="sieben"></input>
+        <p class="psudoku">1</p>
+    </div>
+    <button form="button" onclick="checkSudoku()"></button>
+
+    <script>
+        function checkSudoku(){
+            let zahl1 = document.getElementById("eins");
+            let zahl2 = document.getElementById("zwei");
+            let zahl3 = document.getElementById("drei");
+            let zahl4 = document.getElementById("vier");
+            let zahl5 = document.getElementById("fünf");
+            let zahl6 = document.getElementById("sechs");
+            let zahl7 = document.getElementById("sieben");
+
+
+            if(zahl1.value==3 && zahl2.value==4 && zahl3.value==1 && zahl4.value==2 && zahl5.value==3 && zahl6.value==2 && zahl7.value){
+                console.log("Works");
+                window.location.href="../welcome.html"
+            }else{
+                alert("Leider falsch");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <style>
+        #container {
+          width: 1000px;
+          height: 800px;
+          position: relative;
+          background: green;
+
+        }
+        .animate{
+          width: 50px;
+          height: 50px;
+          position: absolute;
+        }
+
+
+    
+        </style>
+         <link href="wiese.css" type="text/css" rel="stylesheet" />
+</head>
+        <body onload="start()">
+        
+        <p> Dürfen wir vorstellen, das (inoffizielle) HPI- Maskottchen HPI-Schaf -. Aber welches ist das richtige?? Finde es heraus, aber Achtung: sie halten nicht still</p>
+
+       <button id="button1" onclick="move()">Bereit?</button>
+
+    </br>
+        
+        <div id ="container">
+            
+          <div  id ="animate" class="animate">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+          <div  id ="animate2" class="animate">
+            <button onclick="youlose()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+         <!--<div  id ="animate3">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+          <div  id ="animate4">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+          <div  id ="animate5">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+        --> 
+        </div>
+        
+        <script>
+
+    
+
+        function randomposition(){
+        var y = document.getElementById("container").clientHeight-document.getElementById("animate").clientHeight;
+        var x = document.getElementById("container").clientHeight-document.getElementById("animate").clientHeight;
+         var randomY = Math.floor(Math.random()*y);
+         var randomX = Math.floor(Math.random()*x);
+         //alert(randomX);
+        return[randomX,randomY];
+    }
+
+
+
+    function youwin(){
+        alert("you won");
+        clearInterval(id);
+    }
+    
+    function stopgame(){
+        clearInterval(id);
+
+    }
+    function youlose(){
+        var falsesheep =document.getElementById("animate2");
+        falsesheep.style.display ="none"
+    }
+
+    let id = null
+    let id2= null
+   
+    function move(){
+          clearInterval(id);
+          id = setInterval(frame, 600);
+          setTimeout(stopgame, 10000);
+    }
+    function move2(){
+          clearInterval(id2);
+          id2 = setInterval(frame2, 600);
+          setTimeout(stopgame, 10000);
+    }
+
+    /*
+
+    let sheeps = [];
+
+    function addSheeps() {
+      sheeps.push(document.getElementById("animate1"));
+      sheeps.push(document.getElementById("animate2"));
+      sheeps.push(document.getElementById("animate3"));
+      ...
+    }
+
+    function frame() {
+      for (let k=0; k<sheeps.length;k=k+1){
+          sheeps[k].style.top = ...;
+      }
+    }
+
+    */
+
+    function frame() {
+        
+        const elem = document.getElementById("animate");
+        var newposx = randomposition()[0];
+        var newposy = randomposition()[1];
+
+
+              elem.style.top = newposy+ "px";
+              elem.style.left = newposx+"px";}
+            
+  
+    function frame2(){
+        const elem2=document.getElementById("animate2");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+    
+    function start(){
+        move();
+        move2();
+
+    }
+       /* var newpos = randomposition();
+        document.getElementById("animate").animate([{top:newpos[1], left:newpos[0]}], {duration:100,
+            iterations:1}); 
+    }*/ 
+</script>
+
+  </body>
+</html>
+        

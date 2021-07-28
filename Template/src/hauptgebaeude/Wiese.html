@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <style>
+        #container {
+          width: 1000px;
+          height: 800px;
+          position: relative;
+          ;
+
+        }
+        .animate{
+          width: 50px;
+          height: 50px;
+          position: absolute;
+        }
+
+
+    
+        </style>
+         <link href="wiese.css" type="text/css" rel="stylesheet" />
+</head>
+        <body onload="start()">
+        <h1> FIND THE SHEEP!</h1>
+
+        <p> Dürfen wir vorstellen? Das (inoffizielle) HPI -Maskottchen:</p> 
+        <h2> HPI-Schaf </h2>. 
+        <p> Aber welches ist das richtige?? Finde es heraus, aber achtung sie halten nicht still.</p>
+    
+      
+
+    </br>
+        
+        <div id ="container">
+            
+          <div  id ="animate" class="animate">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+          <div  id ="animate2" class="animate">
+            <button onclick="youlose2()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+
+          <div  id ="animate3" class="animate">
+            <button onclick="youlose3()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+
+          <div  id ="animate4" class="animate">
+            <button onclick="youlose4()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+
+
+
+          <div  id ="animate5" class="animate">
+            <button onclick="youlose5()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+
+
+          <div  id ="animate6" class="animate">
+            <button onclick="youlose6()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+
+
+          <div  id ="animate7" class="animate">
+            <button onclick="youlose7()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+          <div  id ="animate8" class="animate">
+            <button onclick="youlose8()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+
+
+         <!--<div  id ="animate3">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+          <div  id ="animate4">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+
+          <div  id ="animate5">
+            <button onclick="youwin()">
+              <img src=https://www.kai-wiechmann.de/grafiken/produkte/580/Schaf_drau%C3%9Fen.jpg>
+            </button>
+          </div>
+        --> 
+        </div>
+        <button onclick="stopgame()">STOP
+        </button>
+        <script>
+
+    
+
+        function randomposition(){
+        var y = document.getElementById("container").clientHeight-document.getElementById("animate").clientHeight;
+        var x = document.getElementById("container").clientHeight-document.getElementById("animate").clientHeight;
+         var randomY = Math.floor(Math.random()*y);
+         var randomX = Math.floor(Math.random()*x);
+         //alert(randomX);
+        return[randomX,randomY];
+    }
+
+
+
+    function youwin(){
+        alert("Congratulation! You found the right sheep!");
+        clearInterval(id);
+        clearInterval(id2);
+        clearInterval(id3);
+        clearInterval(id4);
+        clearInterval(id5);
+        clearInterval(id6);
+        clearInterval(id7);
+        clearInterval(id8);
+    }
+    
+    function stopgame(){
+        
+        alert("I am sorry, but your time is up. Reload the page to try again.")
+        clearInterval(id);
+        clearInterval(id2);
+        clearInterval(id3);
+        clearInterval(id4);
+        clearInterval(id5);
+        clearInterval(id6);
+        clearInterval(id7);
+        clearInterval(id8);
+
+    }
+    function youlose2(){
+        var falsesheep =document.getElementById("animate2");
+        falsesheep.style.display ="none"
+    }
+
+    function youlose3(){
+        var falsesheep =document.getElementById("animate3");
+        falsesheep.style.display ="none"
+    }
+
+    function youlose4(){
+        var falsesheep =document.getElementById("animate4");
+        falsesheep.style.display ="none"
+    }
+    function youlose5(){
+        var falsesheep =document.getElementById("animate5");
+        falsesheep.style.display ="none"
+    }
+
+    function youlose6(){
+        var falsesheep =document.getElementById("animate6");
+        falsesheep.style.display ="none"
+    }
+
+
+    function youlose7(){
+        var falsesheep =document.getElementById("animate7");
+        falsesheep.style.display ="none"
+    }
+
+    function youlose8(){
+        var falsesheep =document.getElementById("animate8");
+        falsesheep.style.display ="none"
+    }
+
+
+
+    let id = null
+    let id2= null
+   
+    function move(){
+          clearInterval(id);
+          id = setInterval(frame, 1000);
+          id2 =setInterval(frame2,1000);
+          id3= setInterval(frame3,1000);
+          id4=setInterval(frame4,1000);
+          id5=setInterval(frame5,1000);
+          id6=setInterval(frame6,1000);
+          id7=setInterval(frame7,1000);
+          id8=setInterval(frame8,1000);
+          setTimeout(stopgame, 15000);
+    }
+  /*  function move2(){
+          clearInterval(id2);
+          id2 = setInterval(frame2, 600);
+          setTimeout(stopgame, 10000);
+    }
+    */
+
+   
+/*
+    let sheeps = [];
+
+    function addSheeps() {
+      sheeps.push(document.getElementById("animate"));
+      sheeps.push(document.getElementById("animate2"));
+      sheeps.push(document.getElementById("animate3"));
+      
+    }
+ 
+    function frame() {
+      for (let k=0; k<sheeps.length;k=k+1){
+          sheeps[k].style.top =  randomposition()[0]+ "px";
+          sheeps[k].style.left =  randomposition()[1]+ "px";
+
+      }
+    }
+
+*/
+
+    function frame() {
+
+        const elem = document.getElementById("animate");
+        var newposx = randomposition()[0];
+        var newposy = randomposition()[1];
+
+
+              elem.style.top = newposy+ "px";
+              elem.style.left = newposx+"px";}
+            
+  
+    function frame2(){
+        const elem2=document.getElementById("animate2");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+
+
+    function frame3(){
+        const elem2=document.getElementById("animate3");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+
+    function frame4(){
+        const elem2=document.getElementById("animate4");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+
+
+     function frame5(){
+        const elem2=document.getElementById("animate5");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+    
+
+    function frame6(){
+        const elem2=document.getElementById("animate6");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+
+
+    function frame7(){
+        const elem2=document.getElementById("animate7");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+
+
+
+    function frame8(){
+        const elem2=document.getElementById("animate8");
+        var newposx2 = randomposition()[0];
+        var newposy2 = randomposition()[1];
+
+
+              elem2.style.top = newposy2+ "px";
+              elem2.style.left = newposx2+"px";}
+    
+    function start(){
+        move();
+
+    }
+       /* var newpos = randomposition();
+        document.getElementById("animate").animate([{top:newpos[1], left:newpos[0]}], {duration:100,
+            iterations:1}); 
+    }*/ 
+</script>
+ </body>
+</html>
+        

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="Hauptgebäude.css">
+    <title>Hauptgebäude</title>
+</head>
+
+<body id="raum4">
+    <h1> 
+       <p id="hg4t1"> Du befindest dich im vierten Raum des Hauptgebäudes. </p>
+    </h1>
+
+    <p id="hg4t2">
+    8888 + 888 + 88 + 8 = ?
+    </p>
+
+    <button type="button" id="button4" onclick="answer();">
+        Antwort
+    </button>
+
+    <button type="button" id="button3" onclick="hint();">
+        tipp :)
+    </button>
+
+    <script>
+
+        function hint() {
+            alert("M   a   r   k   i   e   r   e   n");
+        }
+
+        function answer() {
+            let ans = prompt("Gib deine Antwort ein:");
+            if (ans == 9872) {
+                room5();
+            }
+        }
+
+    function room5() {
+        window.location.replace("../hauptgebaeude/hgraum5.html");
+    }
+    </script>
+
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="Hauptgebäude.css">
+    <title>Hauptgebäude</title>
+</head>
+
+<body id="tür">
+
+<img id="img3" src="https://cdn.discordapp.com/attachments/868779745196769350/869493048592199730/image0.jpg" alt="doorlock"> 
+
+<h1 >
+    <p id=hgtür1 > Du bist im Hauptgebäude angekommen. <br> Aber die Tür ist abgschlossen. </p>
+</h1>
+<h2 >
+    <p id=hgtür2> <br> <br> <br> Du musst den Code erraten. <br> (Tipp: es ist eine Zahl zwischen 1 und 100) </p>
+</h2>
+
+<button id=button7 onclick="code();">
+ Errate den Code!
+</button>
+    
+<script>
+    function code() {
+
+    let num = Math.random() * 100;
+    num = num-num%1;
+    let guess = prompt("errate den Code (von 1 - 100)");
+    let guesszahl = 1;
+
+    while(guess!=num) {
+        if(guess<num)
+        guess = prompt("Es ist nicht " + guess +". Rate höher!");
+        else
+        guess = prompt("Es ist nicht " + guess +". Rate niedriger!");
+
+        guesszahl++;
+    }
+    alert("richtig! Du hast " + guesszahl + " Versuche gebraucht!");
+    room2();
+    }
+</script>
+
+<script>
+    function room2() {
+        window.location.replace("../hauptgebaeude/hgraum2.html" );
+    }
+    </script>
+    
+
+</body>
